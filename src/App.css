@@ -1,18 +1,8 @@
 * {
   box-sizing: border-box;
 }
-.grid {
-  border: 2px solid green;
-  display: flex;
-}
 
-.row {
-  border: 2px solid fuchsia;
-}
-
-.square {
-  height: 100px;
-  width: 100px;
-  border: 2px solid blue;
-  margin: 0px auto;
+img {
+  max-width: 100px;
+  max-height: 100px;
 }
