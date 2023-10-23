@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <h1>Bla a grid!!!</h1>
-      <h2>Bla a grid!!!</h2>
+      <h2>Bla a grid???</h2>
 
       <Grid />
     </div>
