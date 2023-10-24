@@ -6,3 +6,9 @@ img {
   max-width: 100px;
   max-height: 100px;
 }
+
+.header,
+.footer {
+  height: 200px;
+  background-color: blueviolet;
+}
