@@ -51,7 +51,8 @@ const colorArray = [
   "#99E6E6",
   "#6666FF",
 ];
-let spanClass;
+let textClass;
+let heartClass;
 export default function HornedBeast(props) {
   useState(0);
 
@@ -63,7 +64,8 @@ export default function HornedBeast(props) {
   function handleLikes() {
     setLikes(likes + 1);
     setSelectedColor(selectedColor + 1);
-    spanClass = "spin";
+    textClass = "turnred";
+    heartClass = "beat";
   }
 
   return (
@@ -78,8 +80,13 @@ export default function HornedBeast(props) {
     >
       <h2>{props.title}</h2>
       <img src={props.imageUrl} alt={props.title} />
-      <span id="heart" class={spanClass} onClick={handleLikes}>
-        ❤️{likes}
+      <span id="likescontainer" onClick={handleLikes}>
+        <span id="hearticon" className={heartClass}>
+          ❤️
+        </span>
+        <span id="likestext" className={textClass}>
+          {likes}
+        </span>
       </span>
       <p>{props.description}</p>
     </div>

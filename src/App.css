@@ -62,25 +62,52 @@ img {
   border-radius: 10%;
 }
 
-#heart {
+#hearticon {
   cursor: pointer;
-  font-size: 200%;
+  font-size: 150%;
 }
 
-.spin {
-  animation-name: rotate;
-  animation-duration: 20s;
+.beat {
+  animation-name: beat;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  position: relative;
+  animation-fill-mode: both;
 }
 
-@keyframes rotate {
+@keyframes beat {
   0% {
-    transform: rotate(0deg);
+    font-size: 100%;
+  }
+
+  30% {
+    font-size: 150%;
   }
 
   100% {
-    transform: rotate(360deg);
+    font-size: 100%;
+  }
+}
+
+.turnred {
+  /* color: aqua; */
+  animation-name: turnred;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turnred {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: #6c2e2e;
+  }
+
+  100% {
+    color: red;
   }
 }
