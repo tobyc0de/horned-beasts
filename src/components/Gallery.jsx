@@ -8,7 +8,6 @@ export default function Gallery({ handleShowModal, beastsArr }) {
           title={e.title}
           imageUrl={e.image_url}
           description={e.description}
-          handleShowModal={handleShowModal}
         />
       ))}
     </div>

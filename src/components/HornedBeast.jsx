@@ -55,7 +55,7 @@ const colorArray = [
 ];
 let textClass;
 let heartClass;
-export default function HornedBeast(props) {
+export default function HornedBeast({ title, description, imageUrl }) {
   useState(0);
 
   const [likes, setLikes] = useState(0);
@@ -70,6 +70,11 @@ export default function HornedBeast(props) {
     heartClass = "beat";
   }
 
+  const [showModal, setShowModal] = useState(false);
+
+  function handleShowModal() {
+    setShowModal(!showModal);
+  }
   return (
     <div
       className="hornedbeast"
@@ -79,19 +84,24 @@ export default function HornedBeast(props) {
         margin: 20,
       }}
     >
-      <h2>{props.title}</h2>
-      <img
-        src={props.imageUrl}
-        alt={props.title}
-        onClick={props.handleShowModal}
-      />
+      {showModal && (
+        <Modal
+          handleShowModal={handleShowModal}
+          title={title}
+          imageUrl={imageUrl}
+          description={description}
+        />
+      )}
+
+      <h2>{title}</h2>
+      <img src={imageUrl} alt={title} onClick={handleShowModal} />
       <span id="likescontainer" className={heartClass} onClick={handleLikes}>
         <span id="hearticon">❤️</span>
         <span id="likestext" className={textClass}>
           {likes}
         </span>
       </span>
-      <p>{props.description}</p>
+      <p>{description}</p>
     </div>
   );
 }

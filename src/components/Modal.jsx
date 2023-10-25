@@ -1,8 +1,11 @@
-function Modal({ handleShowModal }) {
+function Modal({ title, description, imageUrl, handleShowModal }) {
   return (
     <div className="modal">
-      <h2>Modal</h2>
-      <img id="modalimage" src="" />
+      <h2>{title}</h2>
+      <img id="modalimage" alt={title} src={imageUrl} />
+      <br />
+      <p>{description}</p>
+      <br />
       <button onClick={handleShowModal}>Close</button>
     </div>
   );
