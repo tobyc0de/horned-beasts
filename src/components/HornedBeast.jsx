@@ -51,8 +51,10 @@ const colorArray = [
   "#99E6E6",
   "#6666FF",
 ];
+let spanClass;
 export default function HornedBeast(props) {
   useState(0);
+
   const [likes, setLikes] = useState(0);
   const [selectedColor, setSelectedColor] = useState(
     Math.floor(Math.random() * colorArray.length)
@@ -61,6 +63,7 @@ export default function HornedBeast(props) {
   function handleLikes() {
     setLikes(likes + 1);
     setSelectedColor(selectedColor + 1);
+    spanClass = "spin";
   }
 
   return (
@@ -75,7 +78,7 @@ export default function HornedBeast(props) {
     >
       <h2>{props.title}</h2>
       <img src={props.imageUrl} alt={props.title} />
-      <span id="heart" onClick={handleLikes}>
+      <span id="heart" class={spanClass} onClick={handleLikes}>
         ❤️{likes}
       </span>
       <p>{props.description}</p>

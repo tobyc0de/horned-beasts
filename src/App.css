@@ -3,8 +3,9 @@
 }
 
 img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
 }
 
 .header,
@@ -61,4 +62,22 @@ img {
 #heart {
   cursor: pointer;
   font-size: 300%;
+}
+
+.spin {
+  animation-name: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
