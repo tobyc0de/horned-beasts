@@ -41,7 +41,7 @@ img {
   max-width: 300px;
   overflow: hidden;
   padding: 20px 50px 200px 50px;
-  height: 300px;
+  height: 250px;
   margin-bottom: 20px;
   flex: 1 1 300px;
 }
@@ -52,7 +52,7 @@ img {
   overflow: visible;
   padding: 20px 50px;
   height: auto;
-  min-height: 300px;
+  min-height: 250px;
   background-color: beige;
   color: black;
   border-radius: 10%;
