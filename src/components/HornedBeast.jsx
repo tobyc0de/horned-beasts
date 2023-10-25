@@ -58,7 +58,7 @@ export default function HornedBeast(props) {
 
   const [likes, setLikes] = useState(0);
   const [selectedColor, setSelectedColor] = useState(
-    Math.floor(Math.random() * colorArray.length)
+    Math.floor(Math.random() * colorArray.length - 5)
   );
 
   function handleLikes() {
