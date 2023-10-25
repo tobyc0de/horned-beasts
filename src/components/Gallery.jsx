@@ -185,7 +185,7 @@ const beastsArr = [
     horns: 100,
   },
 ];
-export default function Gallery() {
+export default function Gallery({ handleShowModal }) {
   return (
     <div className="gallery">
       {beastsArr.map((e) => (
@@ -193,6 +193,7 @@ export default function Gallery() {
           title={e.title}
           imageUrl={e.image_url}
           description={e.description}
+          handleShowModal={handleShowModal}
         />
       ))}
     </div>

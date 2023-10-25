@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const colorArray = [
   "#FF6633",
   "#FFB399",
@@ -76,10 +77,13 @@ export default function HornedBeast(props) {
         borderRadius: 10,
         margin: 20,
       }}
-      // style={colorArray[selectedColor]}
     >
       <h2>{props.title}</h2>
-      <img src={props.imageUrl} alt={props.title} />
+      <img
+        src={props.imageUrl}
+        alt={props.title}
+        onClick={props.handleShowModal}
+      />
       <span id="likescontainer" className={heartClass} onClick={handleLikes}>
         <span id="hearticon">❤️</span>
         <span id="likestext" className={textClass}>

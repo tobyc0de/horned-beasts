@@ -16,7 +16,7 @@ function App() {
       {showModal && <Modal handleShowModal={handleShowModal} />}
 
       <Header />
-      <Gallery />
+      <Gallery handleShowModal={handleShowModal} />
       <Footer />
     </>
   );
