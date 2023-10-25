@@ -60,7 +60,7 @@ export default function HornedBeast({ title, description, imageUrl }) {
 
   const [likes, setLikes] = useState(0);
   const [selectedColor, setSelectedColor] = useState(
-    Math.floor(Math.random() * colorArray.length - 5)
+    Math.floor(Math.random() * (colorArray.length - 1) + 1)
   );
 
   function handleLikes() {
@@ -90,10 +90,15 @@ export default function HornedBeast({ title, description, imageUrl }) {
           title={title}
           imageUrl={imageUrl}
           description={description}
+          backgroundColor={colorArray[selectedColor]}
+          handleLikes={handleLikes}
+          heartClass={heartClass}
+          textClass={textClass}
+          likes={likes}
         />
       )}
 
-      <h2>{title}</h2>
+      <h2 onClick={handleShowModal}>{title}</h2>
       <img src={imageUrl} alt={title} onClick={handleShowModal} />
       <span id="likescontainer" className={heartClass} onClick={handleLikes}>
         <span id="hearticon">❤️</span>
@@ -101,7 +106,7 @@ export default function HornedBeast({ title, description, imageUrl }) {
           {likes}
         </span>
       </span>
-      <p>{description}</p>
+      <p onClick={handleShowModal}>{description}</p>
     </div>
   );
 }

@@ -54,16 +54,12 @@ img {
   flex: 1 1 300px;
 }
 
-.hornedbeast:hover {
-  /* width: auto; */
-  max-width: 300px;
-  overflow: visible;
-  padding: 20px 50px;
-  height: auto;
-  min-height: 250px;
-  background-color: beige;
-  color: black;
-  border-radius: 10%;
+.hornedbeast > h2,
+.hornedbeast > img,
+.hornedbeast > p {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌈</text></svg>")
+      16 0,
+    auto;
 }
 
 #hearticon {
@@ -127,4 +123,28 @@ img {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.modalbg {
+  height: fit-content;
+  width: fit-content;
+  padding: 50px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+
+.modalbg > img {
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+button {
+  border-radius: 10%;
 }
