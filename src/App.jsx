@@ -4,9 +4,11 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import { useState } from "react";
 import Modal from "./components/Modal";
+import beastsArr from "./assets/data.json";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+
   function handleShowModal() {
     setShowModal(!showModal);
   }
@@ -16,7 +18,7 @@ function App() {
       {showModal && <Modal handleShowModal={handleShowModal} />}
 
       <Header />
-      <Gallery handleShowModal={handleShowModal} />
+      <Gallery handleShowModal={handleShowModal} beastsArr={beastsArr} />
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-export default function Modal({ handleShowModal }) {
+function Modal({ handleShowModal }) {
   return (
     <div className="modal">
       <h2>Modal</h2>
@@ -7,3 +7,5 @@ export default function Modal({ handleShowModal }) {
     </div>
   );
 }
+
+export default Modal;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Modal from "./Modal";
 
 const colorArray = [
   "#FF6633",
