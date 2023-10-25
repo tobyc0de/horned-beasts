@@ -26,7 +26,7 @@ let characters = [
   "s",
 ];
 
-var colorArray = [
+const colorArray = [
   "#FF6633",
   "#FFB399",
   "#FF33FF",
@@ -83,13 +83,21 @@ export default function Header() {
   const [selectedChar, setSelectedChar] = useState(0);
   const [selectedColor, setSelectedColor] = useState(0);
   function handleHeaderClick() {
-    // user clicks on header onClick
-    // select character in characters array and turn it into unicorn
-    characters[selectedChar] = "🦄";
-    // change the selected char to the next one in the array
-    setSelectedChar(selectedChar + 1);
-    // change the selected color to the next one in the array
     setSelectedColor(selectedColor + 1);
+    selectedChar < characters.length
+      ? selectedChar % 2 === 0
+        ? ((characters[selectedChar] = "💩"), setSelectedChar(selectedChar + 1))
+        : selectedChar % 3 === 0
+        ? ((characters[selectedChar] = "🫎"), setSelectedChar(selectedChar + 1))
+        : ((characters[selectedChar] = "🦄"), setSelectedChar(selectedChar + 1))
+      : (characters[selectedChar + 1] = "🦒");
+    // if (selectedChar % 2 === 0 ) {
+    //   characters[selectedChar] = "";
+    //   setSelectedChar(selectedChar + 1);
+    // } else {
+    //   characters[selectedChar] = "🦄";
+    //   setSelectedChar(selectedChar + 1);
+    // }
   }
   return (
     <div
