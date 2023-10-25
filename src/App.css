@@ -29,6 +29,10 @@ img {
 
 .footer {
   margin-top: 50px;
+  display: flex;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery {
