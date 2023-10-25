@@ -75,10 +75,10 @@ export default function HornedBeast(props) {
     >
       <h2>{props.title}</h2>
       <img src={props.imageUrl} alt={props.title} />
-      <p>{props.description}</p>
       <span id="heart" onClick={handleLikes}>
         ❤️{likes}
       </span>
+      <p>{props.description}</p>
     </div>
   );
 }
