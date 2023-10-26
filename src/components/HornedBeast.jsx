@@ -53,11 +53,10 @@ const colorArray = [
   "#99E6E6",
   "#6666FF",
 ];
-let textClass;
-let heartClass;
-export default function HornedBeast({ title, description, imageUrl }) {
-  useState(0);
 
+export default function HornedBeast({ title, description, imageUrl }) {
+  const [heartClass, setHeartClass] = useState("bla");
+  const [textClass, setTextClass] = useState("bli");
   const [likes, setLikes] = useState(0);
   const [selectedColor, setSelectedColor] = useState(
     Math.floor(Math.random() * (colorArray.length - 1) + 1)
@@ -66,8 +65,8 @@ export default function HornedBeast({ title, description, imageUrl }) {
   function handleLikes() {
     setLikes(likes + 1);
     setSelectedColor(selectedColor + 1);
-    textClass = "turnred";
-    heartClass = "beat";
+    setHeartClass("beat");
+    setTextClass("turnred");
   }
 
   const [showModal, setShowModal] = useState(false);
@@ -93,7 +92,9 @@ export default function HornedBeast({ title, description, imageUrl }) {
           backgroundColor={colorArray[selectedColor]}
           handleLikes={handleLikes}
           heartClass={heartClass}
+          setHeartClass={setHeartClass}
           textClass={textClass}
+          setTextClass={setTextClass}
           likes={likes}
         />
       )}
