@@ -4,21 +4,21 @@ import { useState } from "react";
 
 export default function Gallery({}) {
   const [selectedFilter, setSelectedFilter] = useState(0);
-  function handleSubmit(event) {
-    event.preventDefault();
-    setSelectedFilter(event.target.filter.value);
+  function handleChange(dropdown) {
+    dropdown.preventDefault();
+    setSelectedFilter(dropdown.target.value);
+    console.log(dropdown.target.value);
   }
   return (
     <div id="main">
-      <form onSubmit={handleSubmit}>
-        <select name="filter">
+      <form>
+        <select name="filter" onChange={handleChange}>
           <option value="0">All</option>
           <option value="1">1 horn</option>
           <option value="2">2 horns</option>
           <option value="3">3 horn</option>
           <option value="100">100 horns!</option>
         </select>
-        <button type="submit">Go</button>
       </form>
       <div className="gallery">
         {selectedFilter === 0

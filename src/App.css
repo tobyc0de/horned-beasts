@@ -8,9 +8,38 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  animation-name: woah;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: none;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 110%;
+}
+
+@keyframes woah {
+  0% {
+    background: #ff6633;
+  }
+
+  20% {
+    background: #ffb399;
+  }
+  40% {
+    background: #ff33ff;
+  }
+  60% {
+    background: #ffff99;
+  }
+  80% {
+    background: #00b3e6;
+  }
+  90% {
+    background: #e6b333;
+  }
+  100% {
+    background: #ff6633;
+  }
 }
 
 img {

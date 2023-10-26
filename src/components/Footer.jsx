@@ -9,15 +9,13 @@ const creatorsArr = [
 ];
 
 export default function Footer() {
-  const [selectedCreator, setSelectedCreator] = useState(0);
-  const [creator, setCreator] = useState(creatorsArr[selectedCreator]);
+  const [creator, setCreator] = useState(0);
   function handleFooterClick() {
-    setCreator(creatorsArr[selectedCreator]);
-    setSelectedCreator(selectedCreator + 1);
+    setCreator(creator + 1);
   }
   return (
     <div className="footer" onClick={handleFooterClick}>
-      <div>Created by {creator}</div>
+      <div>Created by {creatorsArr[creator]}</div>
     </div>
   );
 }
