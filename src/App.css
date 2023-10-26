@@ -8,10 +8,9 @@
 body {
   display: flex;
   flex-direction: column;
-}
-.gallery {
-  max-width: 1200px;
-  justify-content: center;
+  background-color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 110%;
 }
 
 img {
@@ -44,6 +43,30 @@ img {
 
 .footer {
   margin-top: 50px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select,
+button[type="submit"] {
+  min-width: 300px;
+  min-height: 100px;
+  font-size: 5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+select {
+  background-color: blueviolet;
+  color: white;
+}
+button {
+  background-color: white;
+  color: blueviolet;
 }
 
 .gallery {

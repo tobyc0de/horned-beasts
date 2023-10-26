@@ -17,7 +17,7 @@ function Modal({
         <br />
         <p>{description}</p>
         <br />
-        <span id="likescontainer" className={heartClass} onClick={handleLikes}>
+        <span id="n" className={heartClass} onClick={handleLikes}>
           <span id="hearticon">❤️</span>
           <span id="likestext" className={textClass}>
             {likes}

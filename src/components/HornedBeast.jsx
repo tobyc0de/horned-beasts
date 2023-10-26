@@ -59,7 +59,7 @@ export default function HornedBeast({ title, description, imageUrl }) {
   const [textClass, setTextClass] = useState("bli");
   const [likes, setLikes] = useState(0);
   const [selectedColor, setSelectedColor] = useState(
-    Math.floor(Math.random() * (colorArray.length - 1) + 1)
+    Math.floor(Math.random() * (colorArray.length - 5) + 1)
   );
 
   function handleLikes() {
@@ -75,39 +75,41 @@ export default function HornedBeast({ title, description, imageUrl }) {
     setShowModal(!showModal);
   }
   return (
-    <div
-      className="hornedbeast"
-      style={{
-        backgroundColor: colorArray[selectedColor],
-        borderRadius: 10,
-        margin: 20,
-      }}
-    >
-      {showModal && (
-        <Modal
-          handleShowModal={handleShowModal}
-          title={title}
-          imageUrl={imageUrl}
-          description={description}
-          backgroundColor={colorArray[selectedColor]}
-          handleLikes={handleLikes}
-          heartClass={heartClass}
-          setHeartClass={setHeartClass}
-          textClass={textClass}
-          setTextClass={setTextClass}
-          likes={likes}
-        />
-      )}
+    <>
+      <div
+        className="hornedbeast"
+        style={{
+          backgroundColor: colorArray[selectedColor],
+          borderRadius: 10,
+          margin: 20,
+        }}
+      >
+        {showModal && (
+          <Modal
+            handleShowModal={handleShowModal}
+            title={title}
+            imageUrl={imageUrl}
+            description={description}
+            backgroundColor={colorArray[selectedColor]}
+            handleLikes={handleLikes}
+            heartClass={heartClass}
+            setHeartClass={setHeartClass}
+            textClass={textClass}
+            setTextClass={setTextClass}
+            likes={likes}
+          />
+        )}
 
-      <h2 onClick={handleShowModal}>{title}</h2>
-      <img src={imageUrl} alt={title} onClick={handleShowModal} />
-      <span id="likescontainer" className={heartClass} onClick={handleLikes}>
-        <span id="hearticon">❤️</span>
-        <span id="likestext" className={textClass}>
-          {likes}
+        <h2 onClick={handleShowModal}>{title}</h2>
+        <img src={imageUrl} alt={title} onClick={handleShowModal} />
+        <span id="likescontainer" className={heartClass} onClick={handleLikes}>
+          <span id="hearticon">❤️</span>
+          <span id="likestext" className={textClass}>
+            {likes}
+          </span>
         </span>
-      </span>
-      <p onClick={handleShowModal}>{description}</p>
-    </div>
+        <p onClick={handleShowModal}>{description}</p>
+      </div>
+    </>
   );
 }
