@@ -32,6 +32,8 @@ img {
 
 .header {
   margin-bottom: 50px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .header:hover {
