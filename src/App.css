@@ -159,3 +159,7 @@ img {
 button {
   border-radius: 10%;
 }
+
+#likescontainer {
+  vertical-align: bottom;
+}
