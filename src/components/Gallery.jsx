@@ -7,7 +7,6 @@ export default function Gallery({}) {
   function handleChange(dropdown) {
     dropdown.preventDefault();
     setSelectedFilter(dropdown.target.value);
-    console.log(dropdown.target.value);
   }
   return (
     <div id="main">
@@ -21,7 +20,7 @@ export default function Gallery({}) {
         </select>
       </form>
       <div className="gallery">
-        {selectedFilter === 0
+        {parseInt(selectedFilter) === 0
           ? beastsArr.map((beast) => (
               <HornedBeast
                 key={beast.title}
