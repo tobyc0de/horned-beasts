@@ -15,30 +15,32 @@ body {
   animation-fill-mode: none;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 110%;
+  background-image: url(../src/assets/bluebg.png);
+  background-size: 50px 50px;
 }
 
 @keyframes woah {
   0% {
-    background: #ff6633;
+    background-color: #ff6633;
   }
 
   20% {
-    background: #ffb399;
+    background-color: #ffb399;
   }
   40% {
-    background: #ff33ff;
+    background-color: #ff33ff;
   }
   60% {
-    background: #ffff99;
+    background-color: #ffff99;
   }
   80% {
-    background: #00b3e6;
+    background-color: #00b3e6;
   }
   90% {
-    background: #e6b333;
+    background-color: #e6b333;
   }
   100% {
-    background: #ff6633;
+    background-color: #ff6633;
   }
 }
 
