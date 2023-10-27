@@ -1,4 +1,5 @@
 import { useState } from "react";
+import canimg from "../assets/can.png";
 
 let characters = [
   "D",
@@ -105,7 +106,7 @@ export default function Header() {
       style={{ backgroundColor: colorArray[selectedColor] }}
       onClick={handleHeaderClick}
     >
-      <img src="src/assets/can.png" id="can" alt="can" />
+      <img src={canimg} id="can" alt="can" />
       <h1>{characters}</h1>
     </div>
   );
