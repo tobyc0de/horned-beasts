@@ -104,11 +104,7 @@ export default function HornedBeast({ title, description, imageUrl }) {
         <img src={imageUrl} alt={title} onClick={handleShowModal} />
         <span id="likescontainer" className={heartClass} onClick={handleLikes}>
           <span id="hearticon">❤️</span>
-          <span id="likestext" className={textClass}>
-            {likes}
-          </span>
         </span>
-        <p onClick={handleShowModal}>{description}</p>
       </div>
     </>
   );

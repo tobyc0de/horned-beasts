@@ -16,7 +16,7 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 110%;
   background-image: url(../src/assets/bluebg.png);
-  background-size: 50px 50px;
+  background-size: 100px 100px;
 }
 
 @keyframes woah {
@@ -123,6 +123,7 @@ button {
   height: 250px;
   margin-bottom: 20px;
   flex: 1 1 300px;
+  border: 15px solid #003cbc;
 }
 
 .hornedbeast > h2,
@@ -133,9 +134,13 @@ button {
     auto;
 }
 
+h2 {
+  font-size: 15px;
+}
+
 #hearticon {
   cursor: pointer;
-  font-size: 150%;
+  font-size: 180%;
 }
 
 .beat {
