@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 let characters = [
-  "B",
+  "D",
   "e",
-  "a",
-  "u",
-  "t",
-  "i",
-  "f",
-  "u",
   "l",
+  "i",
+  "c",
+  "i",
+  "o",
+  "u",
+  "s",
   " ",
   "H",
   "o",
